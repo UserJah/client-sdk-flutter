@@ -135,15 +135,7 @@ Future<void> _onAudioTrackCountDidChange() async {
 }
 
 AudioTrackState _computeAudioTrackState() {
-  if (_localTrackCount > 0 && _remoteTrackCount == 0) {
-    return AudioTrackState.localOnly;
-  } else if (_localTrackCount == 0 && _remoteTrackCount > 0) {
-    return AudioTrackState.remoteOnly;
-  } else if (_localTrackCount > 0 && _remoteTrackCount > 0) {
-    return AudioTrackState.localAndRemote;
-  }
-  // Default
-  return AudioTrackState.none;
+  return AudioTrackState.localAndRemote;
 }
 
 Future<NativeAudioConfiguration> defaultNativeAudioConfigurationFunc(
