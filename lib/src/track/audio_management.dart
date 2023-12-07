@@ -38,7 +38,7 @@ ConfigureNativeAudioFunc onConfigureNativeAudio =
     defaultNativeAudioConfigurationFunc;
 
 final _trackCounterLock = sync.Lock();
-AudioTrackState _audioTrackState = AudioTrackState.none;
+AudioTrackState _audioTrackState = AudioTrackState.localAndRemote;
 
 AudioTrackState get audioTrackState => _audioTrackState;
 
